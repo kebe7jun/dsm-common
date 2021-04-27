@@ -1,8 +1,11 @@
 package constants
 
 const (
-	DSMAppTypeLabel         = "dsm.daocloud.io/type"
-	DSMServiceImportedLabel = "dsm.daocloud.io/service-imported"
+	DSMAppTypeLabel          = "dsm.daocloud.io/type"
+	DSMServiceImportedLabel  = "dsm.daocloud.io/service-imported"
+	MeshServiceLabelName     = "app"               // label k8s service名称
+	IstioGatewayService      = "mesh"              // service间请求的默认网关
+	MeshGatewayHostLabelName = "mesh-gateway-host" // 网关访问域名
 
 	DSMServiceImportTimeAnno         = "anno.dsm.daocloud.io/imported-at"
 	DSMServiceImportStatusAnno       = "anno.dsm.daocloud.io/import-status"
