@@ -49,3 +49,14 @@ func init() {
 func SetDebug() {
 	log.SetLevel(log.DebugLevel)
 }
+
+type Config struct {
+	Output string `json:"output"` // 文件输出路径，不填输出终端
+	Debug  bool   `json:"debug"`
+}
+
+func InitEngine(config *Config) {
+	if config != nil && config.Debug {
+		SetDebug()
+	}
+}
