@@ -3,6 +3,8 @@ package constants
 const (
 	DSMAppTypeLabel          = "dsm.daocloud.io/type"
 	DSMServiceImportedLabel  = "dsm.daocloud.io/service-imported"
+	// istio 1.5 use app as source_app label, and it is not mutable.
+	// so, we can olny use this label name.
 	MeshServiceLabelName     = "app"               // label k8s service名称
 	IstioGatewayService      = "mesh"              // service间请求的默认网关
 	MeshGatewayHostLabelName = "mesh-gateway-host" // 网关访问域名
