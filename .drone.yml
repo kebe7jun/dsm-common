@@ -1,0 +1,37 @@
+---
+kind: pipeline
+type: docker
+name: dsm-common
+
+workspace:
+  base: /go
+  path: src/common
+
+#concurrency:
+#  limit: 1
+
+steps:
+  - name: unit test
+    image: golang:1.14-alpine
+    pull: if-not-exists
+    volumes:
+      - name: go-cache
+        path: /go/pkg
+    environment:
+      GOPROXY: https://goproxy.io
+      GO111MODULE: on
+      GOCACHE: /go/pkg/.cache
+    commands:
+      - GOOS=linux CGO_ENABLED=0 go test ./...
+
+volumes:
+  - name: go-cache
+    host:
+      path: /daocloud/drone/cache/mesh/go
+  - name: docker-cache
+    host:
+      path: /daocloud/drone/cache/mesh/docker/common
+
+  - name: docker-sock
+    host:
+      path: /var/run/docker.sock
