@@ -1,8 +1,8 @@
 package constants
 
 const (
-	DSMAppTypeLabel          = "dsm.daocloud.io/type"
-	DSMServiceImportedLabel  = "dsm.daocloud.io/service-imported"
+	DSMAppTypeLabel         = "dsm.daocloud.io/type"
+	DSMServiceImportedLabel = "dsm.daocloud.io/service-imported"
 	// istio 1.5 use app as source_app label, and it is not mutable.
 	// so, we can olny use this label name.
 	MeshServiceLabelName     = "app"               // label k8s service名称
@@ -24,6 +24,11 @@ const (
 	// but controller always try to fetch the status of the workload.
 	// Format {workloadType}/{workloadName}
 	CustomWorkloadNameAnno = "sm.dx.daocloud.io/custom-workload"
+
+	DSMSVCTypeNormal      = "normal"
+	DSMSVCTypeSpringCloud = "springcloud"
+	DSMSVCTypeVM          = "vm"
+	DSMSVCTypeDubbo       = "dubbo"
 )
 
 var (
@@ -36,4 +41,9 @@ var (
 	_ = DsmManageLabel
 	_ = DXOriginOwnerAnnotationName
 	_ = CustomWorkloadNameAnno
+
+	_ = DSMSVCTypeNormal
+	_ = DSMSVCTypeSpringCloud
+	_ = DSMSVCTypeVM
+	_ = DSMSVCTypeDubbo
 )
