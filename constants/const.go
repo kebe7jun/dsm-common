@@ -12,7 +12,7 @@ const (
 	DSMServiceImportTimeAnno         = "anno.dsm.daocloud.io/imported-at"
 	DSMServiceImportStatusAnno       = "anno.dsm.daocloud.io/import-status"
 	DSMServiceImportFailedReasonAnno = "anno.dsm.daocloud.io/import-failed-reason"
-    DSMServiceImportConfigAnno       = "anno.dsm.daocloud.io/import-config"
+	DSMServiceImportConfigAnno       = "anno.dsm.daocloud.io/import-config"
 
 	// DsmManageLabel
 	DsmManageLabel = "dsm.daocloud.io/managed"
