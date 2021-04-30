@@ -30,6 +30,10 @@ const (
 	DSMSVCTypeSpringCloud = "springcloud"
 	DSMSVCTypeVM          = "vm"
 	DSMSVCTypeDubbo       = "dubbo"
+
+	// DSMSVCDefaultVersion defines the default version of DSM imported service
+	// when users specify none service version
+	DSMSVCDefaultVersion = "v1"
 )
 
 var (
