@@ -27,8 +27,10 @@ const (
 
 	DSMSVCTypeNormal      = "normal"
 	DSMSVCTypeSpringCloud = "springcloud"
-	DSMSVCTypeVM          = "vm"
 	DSMSVCTypeDubbo       = "dubbo"
+
+	DSMDeployTypeVM        = "vm"
+	DSMDeployTypeContainer = "container"
 )
 
 var (
@@ -44,6 +46,8 @@ var (
 
 	_ = DSMSVCTypeNormal
 	_ = DSMSVCTypeSpringCloud
-	_ = DSMSVCTypeVM
 	_ = DSMSVCTypeDubbo
+
+	_ = DSMDeployTypeVM
+	_ = DSMDeployTypeContainer
 )
