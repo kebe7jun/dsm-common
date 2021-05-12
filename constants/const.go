@@ -12,6 +12,7 @@ const (
 	DSMServiceImportTimeAnno         = "anno.dsm.daocloud.io/imported-at"
 	DSMServiceImportStatusAnno       = "anno.dsm.daocloud.io/import-status"
 	DSMServiceImportFailedReasonAnno = "anno.dsm.daocloud.io/import-failed-reason"
+	DSMServiceImportConfigAnno       = "anno.dsm.daocloud.io/import-config"
 
 	// DsmManageLabel
 	DsmManageLabel = "dsm.daocloud.io/managed"
@@ -31,6 +32,10 @@ const (
 
 	DSMDeployTypeVM        = "vm"
 	DSMDeployTypeContainer = "container"
+
+	// DSMSVCDefaultVersion defines the default version of DSM imported service
+	// when users specify none service version
+	DSMSVCDefaultVersion = "v1"
 )
 
 var (
@@ -40,6 +45,7 @@ var (
 	_ = DSMServiceImportTimeAnno
 	_ = DSMServiceImportStatusAnno
 	_ = DSMServiceImportFailedReasonAnno
+	_ = DSMServiceImportConfigAnno
 	_ = DsmManageLabel
 	_ = DXOriginOwnerAnnotationName
 	_ = CustomWorkloadNameAnno
