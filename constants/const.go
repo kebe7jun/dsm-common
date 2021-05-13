@@ -3,7 +3,7 @@ package constants
 const (
 	DSMAppTypeLabel         = "dsm.daocloud.io/type"
 	DSMServiceImportedLabel = "dsm.daocloud.io/service-imported"
-	// istio 1.5 use app as source_app label, and it is not mutable.
+	// istio 1.5 use app as source_app label, and it is immutable.
 	// so, we can olny use this label name.
 	MeshServiceLabelName     = "app"               // label k8s service名称
 	IstioGatewayService      = "mesh"              // service间请求的默认网关
@@ -31,6 +31,11 @@ const (
 	DSMSVCTypeVM          = "vm"
 	DSMSVCTypeDubbo       = "dubbo"
 
+	ProtocolTCP   Protocol = "tcp"
+	ProtocolHTTP  Protocol = "http"
+	ProtocolHTTPS Protocol = "https"
+	ProtocolUDP   Protocol = "udp"
+
 	// DSMSVCDefaultVersion defines the default version of DSM imported service
 	// when users specify none service version
 	DSMSVCDefaultVersion = "v1"
@@ -52,4 +57,9 @@ var (
 	_ = DSMSVCTypeSpringCloud
 	_ = DSMSVCTypeVM
 	_ = DSMSVCTypeDubbo
+
+	_ = ProtocolTCP
+	_ = ProtocolHTTP
+	_ = ProtocolHTTPS
+	_ = ProtocolUDP
 )
