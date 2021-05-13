@@ -33,8 +33,8 @@ const (
 
 	ProtocolTCP   Protocol = "tcp"
 	ProtocolHTTP  Protocol = "http"
+	ProtocolHTTP2 Protocol = "http2"
 	ProtocolHTTPS Protocol = "https"
-	ProtocolUDP   Protocol = "udp"
 
 	// DSMSVCDefaultVersion defines the default version of DSM imported service
 	// when users specify none service version
@@ -60,6 +60,6 @@ var (
 
 	_ = ProtocolTCP
 	_ = ProtocolHTTP
+	_ = ProtocolHTTP2
 	_ = ProtocolHTTPS
-	_ = ProtocolUDP
 )
