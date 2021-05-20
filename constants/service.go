@@ -5,9 +5,11 @@ type ImportService struct {
 	Ports          []ImportServicePort `json:"ports"`           // 端口和协议
 }
 
+type Protocol string
+
 type ImportServicePort struct {
-	Number   int32  `json:"number"`   // 监听端口
-	Protocol string `json:"protocol"` // 协议，如TCP、UDP
+	Number   int32    `json:"number"`   // 监听端口
+	Protocol Protocol `json:"protocol"` // 协议，如TCP、UDP
 }
 
 func NewImportService(version string, ports []ImportServicePort) *ImportService {
