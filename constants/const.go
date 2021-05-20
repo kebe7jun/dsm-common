@@ -2,6 +2,7 @@ package constants
 
 const (
 	DSMAppTypeLabel         = "dsm.daocloud.io/type"
+	DSMDeployTypeLabel      = "dsm.daocloud.io/deploy-type"
 	DSMServiceImportedLabel = "dsm.daocloud.io/service-imported"
 	// istio 1.5 use app as source_app label, and it is immutable.
 	// so, we can olny use this label name.
@@ -28,8 +29,10 @@ const (
 
 	DSMSVCTypeNormal      = "normal"
 	DSMSVCTypeSpringCloud = "springcloud"
-	DSMSVCTypeVM          = "vm"
 	DSMSVCTypeDubbo       = "dubbo"
+
+	DSMDeployTypeVM        = "vm"
+	DSMDeployTypeContainer = "container"
 
 	ProtocolTCP   Protocol = "tcp"
 	ProtocolHTTP  Protocol = "http"
@@ -44,6 +47,7 @@ const (
 var (
 	// avoid unused warnings
 	_ = DSMAppTypeLabel
+	_ = DSMDeployTypeLabel
 	_ = DSMServiceImportedLabel
 	_ = DSMServiceImportTimeAnno
 	_ = DSMServiceImportStatusAnno
@@ -55,8 +59,10 @@ var (
 
 	_ = DSMSVCTypeNormal
 	_ = DSMSVCTypeSpringCloud
-	_ = DSMSVCTypeVM
 	_ = DSMSVCTypeDubbo
+
+	_ = DSMDeployTypeVM
+	_ = DSMDeployTypeContainer
 
 	_ = ProtocolTCP
 	_ = ProtocolHTTP
