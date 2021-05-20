@@ -10,3 +10,14 @@ const (
 	KeyTypeStr           = "str"
 	SearchPartsSep       = ';'
 )
+
+var (
+	_ = PaginateKey
+	_ = AdvancedSearchPrefix
+	_ = SortASC
+	_ = SortDesc
+	_ = KeyTypeSep
+	_ = KeyTypeInt
+	_ = KeyTypeStr
+	_ = SearchPartsSep
+)
