@@ -15,11 +15,11 @@ import (
 )
 
 type Paginate struct {
-	Page     int64  `json:"page,omitempty"`
-	PageSize int64  `json:"page_size,omitempty"`
-	Total    int64  `json:"total,omitempty"`
-	Sort     string `json:"sort,omitempty"`
-	Search   string `json:"search,omitempty"`
+	Page     int64  `json:"page,omitempty" form:"page"`
+	PageSize int64  `json:"page_size,omitempty" form:"page_size"`
+	Total    int64  `json:"total,omitempty"form:"total" `
+	Sort     string `json:"sort,omitempty" form:"sort"`
+	Search   string `json:"search,omitempty" form:"search"`
 }
 
 func (p *Paginate) Match(m map[string]string) (bool, error) {
