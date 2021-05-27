@@ -1,14 +1,17 @@
 package vm
 
 type DSMAgentConfig struct {
-	// DSM Server address, like http://10.31.11.1:30801/api
-	Server string `json:"server,omitempty"`
-
 	// Token defines the auth info to dsm server.
 	Token string `json:"token,omitempty"`
 
 	// Fetch config from dsm server.
 	FromServer bool `json:"from_server,omitempty"`
+
+	// The pilot IP for XDS.
+	PilotIP string `json:"pilot_ip,omitempty" yaml:"pilot_ip,omitempty"`
+
+	// The pilot IP for XDS.
+	PilotHost string `json:"pilot_host,omitempty" yaml:"pilot_host,omitempty"`
 
 	// Namespace of this vm.
 	Namespace string `json:"namespace,omitempty"`
